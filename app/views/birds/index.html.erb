@@ -1,1 +1,48 @@
 <h2>Bruce's Birds</h2>
+
+<table class = "table table-striped">
+  <tr>
+      <th> Taxon Name </th>
+      <th> Family Common Name</th>
+      <th> Taxon Scientific Name</th>
+      <th> Family Scientific Name</th>
+      <th> Order </th>
+      <th> Population </th>
+      <th> Status </th>
+    </tr>
+  <% @emus.each do |emu| %>
+  <tr>
+    <td><%= emu.taxon_name %></td>
+    <td><%= emu.family_common_name%></td>
+    <td><%= emu.taxon_scientific_name%></td>
+    <td><%= emu.family_scientific_name%></td>
+    <td><%= emu.order%></td>
+    <td><%= emu.population%></td>
+    <td><%= emu.status%></td>
+  </tr>
+  <% end %>
+</table>
+<table class="table table-striped">
+  <tr>
+    <th> Taxon Name </th>
+    <th> Family Common Name</th>
+    <th> Taxon Scientific Name</th>
+    <th> Family Scientific Name</th>
+    <th> Order </th>
+    <th> Population </th>
+    <th> Status </th>
+  </tr>
+  <% @birds.each do |bird| %>
+  <tr>
+    <td><%= bird.taxon_name %></td>
+    <td><%= bird.family_common_name%></td>
+    <td><%= bird.taxon_scientific_name%></td>
+    <td><%= bird.family_scientific_name%></td>
+    <td><%= bird.order%></td>
+    <td><%= bird.population%></td>
+    <td><%= bird.status%></td>
+  </tr>
+  <% end %>
+</table>
+
+<button><%=@birds.findEmus</button>
